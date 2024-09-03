@@ -4,7 +4,9 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <header className="z-10 w-full max-w-5xl flex flex-col items-center justify-center font-mono text-sm lg:flex-row lg:justify-between lg:text-left">
-        <h1 className="text-4xl font-bold mb-6 lg:mb-0">Welcome to My Portfolio</h1>
+        <h1 className="text-4xl font-bold mb-6 lg:mb-0">
+          Welcome to My Portfolio
+        </h1>
         <p className="text-center lg:text-right">
           Crafted using Next.js & React.
         </p>
@@ -18,12 +20,14 @@ export default function Home() {
           height={150}
           className="rounded-full mb-4"
         />
-        <h2 className="text-3xl font-semibold">Hi, I'm Kyle Cubit</h2>
+        <h2 className="text-3xl font-semibold">Hi, I&apos;m Kyle Cubit</h2>
         <p className="text-lg mt-2 text-center max-w-xl">
-        I'm a Software Developer passionate about data analysis and crafting responsive, user-friendly web and mobile applications. Explore my work below!
+          I&apos;m a Software Developer passionate about data analysis and
+          crafting responsive, user-friendly web and mobile applications.
+          Explore my work below!
         </p>
       </section>
-    
+
       <section className="grid text-center lg:w-full lg:max-w-5xl lg:grid-cols-3 lg:gap-6 lg:text-left mt-16">
         <a
           href="/projects"
@@ -36,7 +40,7 @@ export default function Home() {
             </span>
           </h2>
           <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore the projects I've worked on.
+            Explore the projects I&apos;ve worked on.
           </p>
         </a>
 
@@ -76,11 +80,24 @@ export default function Home() {
           © 2024 Kyle Cubit. All rights reserved.
         </p>
         <div className="flex gap-4 mt-4">
-          <a href="https://github.com/kjcubit47" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://github.com/kjcubit47"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Image src="/github-icon.png" alt="GitHub" width={35} height={30} />
           </a>
-          <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
-            <Image src="/linkedin-icon.png" alt="LinkedIn" width={41} height={40} />
+          <a
+            href="https://linkedin.com/in/your-profile"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src="/linkedin-icon.png"
+              alt="LinkedIn"
+              width={41}
+              height={40}
+            />
           </a>
         </div>
       </footer>

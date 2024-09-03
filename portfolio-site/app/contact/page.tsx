@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useState } from "react";
 
 export default function Contact() {
@@ -8,11 +8,11 @@ export default function Contact() {
     message: "",
   });
 
-  const handleChange = (e : any) => {
+  const handleChange = (e: any) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e : any) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
     // Here you would typically handle form submission, such as sending the data to your server or an email service
     console.log("Form submitted:", formData);
@@ -25,10 +25,14 @@ export default function Contact() {
       <section className="w-full max-w-4xl">
         <h1 className="text-4xl font-bold mb-6">Contact Me</h1>
         <p className="text-lg mb-4">
-          I'd love to hear from you! Whether you have a question, a project idea, or just want to say hello, feel free to get in touch using the form below.
+          I&apos;d love to hear from you! Whether you have a question, a project
+          idea, or just want to say hello, feel free to get in touch using the
+          form below.
         </p>
         <form className="flex flex-col" onSubmit={handleSubmit}>
-          <label htmlFor="name" className="text-lg mb-2">Name</label>
+          <label htmlFor="name" className="text-lg mb-2">
+            Name
+          </label>
           <input
             type="text"
             id="name"
@@ -39,7 +43,9 @@ export default function Contact() {
             required
           />
 
-          <label htmlFor="email" className="text-lg mb-2">Email</label>
+          <label htmlFor="email" className="text-lg mb-2">
+            Email
+          </label>
           <input
             type="email"
             id="email"
@@ -50,7 +56,9 @@ export default function Contact() {
             required
           />
 
-          <label htmlFor="message" className="text-lg mb-2">Message</label>
+          <label htmlFor="message" className="text-lg mb-2">
+            Message
+          </label>
           <textarea
             id="message"
             name="message"
