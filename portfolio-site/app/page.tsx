@@ -12,15 +12,15 @@ export default function Home() {
 
       <section className="flex flex-col items-center mt-12">
         <Image
-          src="/profile-pic.jpg"
+          src="/profile-pic.png"
           alt="Profile Picture"
           width={150}
           height={150}
           className="rounded-full mb-4"
         />
-        <h2 className="text-3xl font-semibold">Hi, I'm [Your Name]</h2>
+        <h2 className="text-3xl font-semibold">Hi, I'm Kyle Cubit</h2>
         <p className="text-lg mt-2 text-center max-w-xl">
-          I'm a [Your Profession, e.g., Full-Stack Developer] with a passion for building responsive and user-friendly web applications. Check out my work below!
+        I'm a Software Developer passionate about data analysis and crafting responsive, user-friendly web and mobile applications. Explore my work below!
         </p>
       </section>
     
@@ -73,14 +73,14 @@ export default function Home() {
 
       <footer className="flex flex-col items-center mt-16">
         <p className="text-sm text-center">
-          © 2024 [Your Name]. All rights reserved.
+          © 2024 Kyle Cubit. All rights reserved.
         </p>
         <div className="flex gap-4 mt-4">
-          <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">
-            <Image src="/github-icon.svg" alt="GitHub" width={30} height={30} />
+          <a href="https://github.com/kjcubit47" target="_blank" rel="noopener noreferrer">
+            <Image src="/github-icon.png" alt="GitHub" width={35} height={30} />
           </a>
           <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
-            <Image src="/linkedin-icon.svg" alt="LinkedIn" width={30} height={30} />
+            <Image src="/linkedin-icon.png" alt="LinkedIn" width={41} height={40} />
           </a>
         </div>
       </footer>
