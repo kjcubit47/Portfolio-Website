@@ -85,7 +85,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image src="/github-icon.png" alt="GitHub" width={35} height={30} />
+            <Image src="/github-icon.png" alt="GitHub" width={36} height={40} />
           </a>
           <a
             href="https://linkedin.com/in/your-profile"
