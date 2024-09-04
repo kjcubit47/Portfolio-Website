@@ -1,42 +1,25 @@
 import Image from "next/image";
+import ProjectCard from "../Components/ProjectCard";
 
 export default function Projects() {
   const projects = [
     {
-      title: "React Native Essentials",
+      title: "CodeMesa",
       description:
-        "A mobile app built with React Native that showcases the essential features of the framework, including navigation, state management, and API integration.",
-      technologies: ["React Native", "JavaScript", "Expo", "Redux"],
-      liveDemo: "https://example.com/react-native-essentials",
-      github: "https://github.com/yourusername/react-native-essentials",
-      image: "/images/react-native-essentials.png",
+        "Code Mesa is a comprehensive programming tutorial website designed to help users learn coding, data science, machine learning, artificial intelligence, and more. Offering a wide range of courses and resources, Code Mesa caters to beginners and advanced learners alike, with content that is categorized by difficulty level, tags, and programming languages.",
+      technologies: ["Next.js", "JavaScript", "React", "Firebase"],
+      demoLink: "https://code-mesa.net",
+      demoButtonText: "Visit CodeMesa",
+      image: "/mesa-test-logo.png",
     },
     {
-      title: "Data Science with R: Titanic EDA",
+      title: "Ticked",
       description:
-        "An in-depth exploratory data analysis of the Titanic dataset using R, focusing on data cleaning, visualization, and statistical analysis to uncover key insights.",
-      technologies: ["R", "ggplot2", "dplyr", "tidyverse"],
-      liveDemo: "https://example.com/titanic-eda",
-      github: "https://github.com/yourusername/titanic-eda",
-      image: "/images/titanic-eda.png",
-    },
-    {
-      title: "Next.js Portfolio Website",
-      description:
-        "A responsive and modern portfolio website built with Next.js, showcasing my work and skills. It features server-side rendering, dynamic routing, and API integration.",
-      technologies: ["Next.js", "React", "CSS", "Vercel"],
-      liveDemo: "https://yourportfolio.com",
-      github: "https://github.com/yourusername/portfolio-website",
-      image: "/images/portfolio-website.png",
-    },
-    {
-      title: "Machine Learning with Python",
-      description:
-        "A series of machine learning projects implemented using Python, covering algorithms like linear regression, decision trees, and neural networks with real-world datasets.",
-      technologies: ["Python", "scikit-learn", "TensorFlow", "Pandas"],
-      liveDemo: "https://example.com/ml-python",
-      github: "https://github.com/yourusername/ml-python-projects",
-      image: "/images/ml-python.png",
+        "Ticked is a minimalistic and intuitive to-do list app built with React Native and Expo. Designed to help you stay organized and on top of your tasks, Ticked allows you to easily create, manage, and complete tasks with a simple and user-friendly interface.",
+      technologies: ["React Native", "Expo", "Redux"],
+      githubLink: "https://github.com/kjcubit47/Ticked",
+      image: "/tickedBG.jpeg",
+      demoButtonText: "",
     },
   ];
 
@@ -45,42 +28,9 @@ export default function Projects() {
       <section className="w-full max-w-6xl">
         <h1 className="text-4xl font-bold mb-10">Projects</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <div key={index} className="border rounded-lg shadow-lg overflow-hidden">
-              <Image
-                src={project.image}
-                alt={project.title}
-                width={600}
-                height={400}
-                className="w-full h-40 object-cover"
-              />
-              <div className="p-4">
-                <h2 className="text-2xl font-semibold mb-2">{project.title}</h2>
-                <p className="text-gray-700 mb-4">{project.description}</p>
-                <p className="text-sm text-gray-500 mb-4">
-                  <strong>Technologies:</strong> {project.technologies.join(", ")}
-                </p>
-                <div className="flex justify-between">
-                  <a
-                    href={project.liveDemo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 hover:underline"
-                  >
-                    Live Demo
-                  </a>
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 hover:underline"
-                  >
-                    GitHub
-                  </a>
-                </div>
-              </div>
-            </div>
-          ))}
+          {projects.map((proj) => {
+            return <ProjectCard project={proj} key={proj.title}></ProjectCard>;
+          })}
         </div>
       </section>
     </main>
