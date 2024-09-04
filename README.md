@@ -18,7 +18,7 @@ You can view the live version of my portfolio at [kylecubit.dev](https://kylecub
 - **React:** A JavaScript library for building user interfaces.
 - **Next.js:** A React framework for server-rendered applications.
 - **Tailwind CSS:** A utility-first CSS framework for styling.
-- **Vercel:** Hosting platform for deploying the site.
+- **Firebase:** Hosting platform for deploying the site.
 
 ## Installation
 
@@ -28,3 +28,18 @@ If you'd like to run this project locally, follow these steps:
 
    ```bash
    git clone https://github.com/yourusername/portfolio-website.git
+
+2. Navigate to the project directory:
+
+    ```bash
+    cd portfolio-website
+
+3. Install the dependencies:
+   ```bash
+   npm install
+
+4. Run the development server:
+   ```bash
+   npm run dev
+
+5. Open http://localhost:3000 in your browser to view the site.
