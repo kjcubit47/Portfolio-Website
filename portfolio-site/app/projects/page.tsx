@@ -10,7 +10,7 @@ export default function Projects() {
       technologies: ["Next.js", "JavaScript", "React", "Firebase"],
       demoLink: "https://code-mesa.net",
       demoButtonText: "Visit CodeMesa",
-      image: "/mesa-test-logo.png",
+      image: "/Mesa-test-logo.png",
     },
     {
       title: "Ticked",
@@ -18,7 +18,7 @@ export default function Projects() {
         "Ticked is a minimalistic and intuitive to-do list app built with React Native and Expo. Designed to help you stay organized and on top of your tasks, Ticked allows you to easily create, manage, and complete tasks with a simple and user-friendly interface.",
       technologies: ["React Native", "Expo", "Redux"],
       githubLink: "https://github.com/kjcubit47/Ticked",
-      image: "/tickedBG.jpeg",
+      image: "/TickedBG.jpeg",
       demoButtonText: "",
     },
   ];
