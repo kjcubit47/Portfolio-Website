@@ -7,16 +7,33 @@ export default function Contact() {
     email: "",
     message: "",
   });
+  const [status, setStatus] = useState<string>("");
 
   const handleChange = (e: any) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
-    // Here you would typically handle form submission, such as sending the data to your server or an email service
-    console.log("Form submitted:", formData);
-    alert("Thank you for your message! I'll get back to you soon.");
+
+    const response = await fetch("https://formspree.io/f/xgvwqpdk", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+      }),
+    });
+
+    if (response.ok) {
+      setStatus("Message sent successfully!");
+    } else {
+      setStatus("Something went wrong. Please try again.");
+    }
+
     setFormData({ name: "", email: "", message: "" });
   };
 
@@ -75,6 +92,7 @@ export default function Contact() {
             Send Message
           </button>
         </form>
+        {status && <p className="mt-4 text-lg text-green-600">{status}</p>}
       </section>
     </main>
   );
